@@ -1,0 +1,4 @@
+1️⃣ Grid background (visual langsung lebih bagus)
+2️⃣ High score system (game terasa nyata)
+3️⃣ Obstacle system (gameplay naik level)
+4️⃣ Special food
