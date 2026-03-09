@@ -3,13 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Game - Mobile Friendly</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Animate.css untuk animasi tambahan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content">
+            <div class="splash-logo animate__animated animate__bounceIn">
+                🐍
+            </div>
 
-    <canvas id="game" width="400" height="400"></canvas>
+            <h1 class="splash-title animate__animated animate__fadeInUp">
+                SNAKE
+            </h1>
+
+            <div class="splash-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                CLASSIC EDITION
+            </div>
+
+            <div class="splash-snake">
+                <div class="splash-snake-dot"></div>
+                <div class="splash-snake-dot"></div>
+                <div class="splash-snake-dot"></div>
+                <div class="splash-snake-dot"></div>
+            </div>
+
+            <div class="splash-progress">
+                <div class="splash-progress-bar"></div>
+            </div>
+
+            <div class="splash-tap">
+                <i class="bi bi-hand-index-thumb"></i> Tap anywhere to continue
+            </div>
+        </div>
+
+        <div class="splash-footer">
+            <i class="bi bi-arrow-up"></i>
+            <i class="bi bi-arrow-down"></i>
+            <i class="bi bi-arrow-left"></i>
+            <i class="bi bi-arrow-right"></i>
+            <span class="ms-2">Swipe to play</span>
+        </div>
+    </div>
+
+    <div class="container game-wrapper">
+        <div class="game-card p-3 p-md-4">
+            <!-- Title -->
+            <div class="text-center mb-3">
+                <h1 class="game-title">
+                    <span>🐍</span> SNAKE CLASSIC <span>🐍</span>
+                </h1>
+            </div>
+
+            <!-- Score Cards -->
+            <div class="score-container mb-3">
+                <div class="score-item">
+                    <div class="score-label">SCORE</div>
+                    <div class="score-value" id="scoreDisplay">0</div>
+                </div>
+                <div class="score-item high">
+                    <div class="score-label">HIGH SCORE</div>
+                    <div class="score-value" id="highScoreDisplay">0</div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <div class="canvas-container mb-3">
+                <canvas id="game" width="400" height="400"></canvas>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-container">
+                <div class="swipe-instruction">
+                    <div class="swipe-icon">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <i class="bi bi-arrow-up-down"></i>
+                    </div>
+
+                    <div class="instruction-text">
+                        Swipe layar untuk menggerakkan ular
+                    </div>
+
+                    <div class="instruction-sub">
+                        ⬆ ⬇ ⬅ ➡ Geser layar
+                    </div>
+                </div>
+
+                <div class="restart-hint text-center">
+                    <i class="bi bi-arrow-repeat me-1"></i>
+                    Tap canvas atau tekan SPACE untuk restart
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
 
